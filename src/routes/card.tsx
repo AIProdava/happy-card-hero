@@ -30,7 +30,10 @@ function CardPage() {
   const imageId = getCardImageById(search.image) ? search.image : defaultCardImageId;
   const image = getCardImageById(imageId) ?? cardImages[0]!;
 
-  const cardUrl = typeof window !== "undefined" ? window.location.href : "";
+  const [cardUrl, setCardUrl] = useState("");
+  useEffect(() => {
+    setCardUrl(window.location.href);
+  }, []);
 
   const handleCopyLink = async () => {
     const success = await copyCardLink(cardUrl);
