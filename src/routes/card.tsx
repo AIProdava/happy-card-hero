@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { z } from "zod";
 import { toast } from "sonner";
+import { useEffect, useState } from "react";
 
 import { cardImages, defaultCardImageId, getCardImageById } from "@/lib/card-data";
 import { copyCardLink } from "@/lib/share";
