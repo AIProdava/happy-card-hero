@@ -69,10 +69,10 @@ function CardPage() {
 
             <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
               <div className="space-y-2">
-                <p className="font-serif italic text-2xl md:text-3xl text-primary">
-                  Happy birthday,
-                </p>
-                <h1 className="font-serif text-5xl md:text-6xl text-foreground tracking-tight text-balance leading-none">
+              <p className="font-serif italic text-2xl md:text-3xl text-primary text-shadow-sm">
+                Happy birthday,
+              </p>
+              <h1 className="font-serif text-5xl md:text-6xl text-foreground tracking-tight text-balance leading-none text-shadow-md">
                   {name}
                 </h1>
               </div>
