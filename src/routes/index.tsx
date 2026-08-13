@@ -7,9 +7,15 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Celebra — Create a Birthday Card" },
-      { name: "description", content: "Enter a name, choose an artwork, and share a personalized birthday card." },
+      {
+        name: "description",
+        content: "Enter a name, choose an artwork, and share a personalized birthday card.",
+      },
       { property: "og:title", content: "Celebra — Create a Birthday Card" },
-      { property: "og:description", content: "Enter a name, choose an artwork, and share a personalized birthday card." },
+      {
+        property: "og:description",
+        content: "Enter a name, choose an artwork, and share a personalized birthday card.",
+      },
     ],
   }),
   component: IndexPage,
@@ -49,7 +55,9 @@ function IndexPage() {
 
             <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
               <div className="space-y-2">
-                <p className="font-serif italic text-2xl md:text-3xl text-primary">Happy birthday,</p>
+                <p className="font-serif italic text-2xl md:text-3xl text-primary">
+                  Happy birthday,
+                </p>
                 <h1 className="font-serif text-5xl md:text-6xl text-foreground tracking-tight text-balance leading-none">
                   {name.trim() || "someone"}
                 </h1>
@@ -62,7 +70,10 @@ function IndexPage() {
 
         <section className="space-y-10">
           <div className="space-y-3">
-            <label htmlFor="name" className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground ml-1">
+            <label
+              htmlFor="name"
+              className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground ml-1"
+            >
               Recipient Name
             </label>
             <input
@@ -82,7 +93,8 @@ function IndexPage() {
                 Select Artwork
               </span>
               <span className="text-[10px] text-muted-foreground">
-                {cardImages.findIndex((image) => image.id === selectedImageId) + 1} of {cardImages.length}
+                {cardImages.findIndex((image) => image.id === selectedImageId) + 1} of{" "}
+                {cardImages.length}
               </span>
             </div>
 
@@ -98,7 +110,7 @@ function IndexPage() {
                       "flex-none w-24 aspect-[4/5] rounded-lg overflow-hidden transition-all",
                       isSelected
                         ? "ring-2 ring-primary ring-offset-4 ring-offset-background"
-                        : "grayscale opacity-60 hover:grayscale-0 hover:opacity-100"
+                        : "grayscale opacity-60 hover:grayscale-0 hover:opacity-100",
                     )}
                     aria-label={`Select ${image.label}`}
                     aria-pressed={isSelected}

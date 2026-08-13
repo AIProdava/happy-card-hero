@@ -43,7 +43,10 @@ function CardPage() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/10">
       <nav className="sticky top-0 z-20 flex items-center justify-between px-6 py-4 bg-background/80 backdrop-blur-md border-b border-border">
-        <Link to="/" className="font-medium tracking-tight text-sm hover:opacity-70 transition-opacity">
+        <Link
+          to="/"
+          className="font-medium tracking-tight text-sm hover:opacity-70 transition-opacity"
+        >
           CELEBRA
         </Link>
         <div className="size-2 rounded-full bg-primary animate-pulse" />
@@ -62,7 +65,9 @@ function CardPage() {
 
             <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
               <div className="space-y-2">
-                <p className="font-serif italic text-2xl md:text-3xl text-primary">Happy birthday,</p>
+                <p className="font-serif italic text-2xl md:text-3xl text-primary">
+                  Happy birthday,
+                </p>
                 <h1 className="font-serif text-5xl md:text-6xl text-foreground tracking-tight text-balance leading-none">
                   {name}
                 </h1>

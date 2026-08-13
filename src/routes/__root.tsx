@@ -79,10 +79,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Celebra — Birthday Cards" },
-      { name: "description", content: "Create and share beautiful birthday greeting cards in seconds." },
+      {
+        name: "description",
+        content: "Create and share beautiful birthday greeting cards in seconds.",
+      },
       { name: "author", content: "Celebra" },
       { property: "og:title", content: "Celebra — Birthday Cards" },
-      { property: "og:description", content: "Create and share beautiful birthday greeting cards in seconds." },
+      {
+        property: "og:description",
+        content: "Create and share beautiful birthday greeting cards in seconds.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Celebra" },
