@@ -6,23 +6,20 @@ import { cardImages, defaultCardImageId, getCardImageById } from "@/lib/card-dat
 import { copyCardLink } from "@/lib/share";
 
 const cardSearchSchema = z.object({
-  name: z.string().optional().catch("someone"),
-  image: z.string().optional().catch(defaultCardImageId),
+  name: z.string().min(1).max(30).default("someone"),
+  image: z.string().default(defaultCardImageId),
 });
 
 export const Route = createFileRoute("/card")({
   validateSearch: cardSearchSchema,
-  head: ({ search }) => {
-    const name = search.name || "someone";
-    return {
-      meta: [
-        { title: `Happy birthday, ${name} — Celebra` },
-        { name: "description", content: `A personalized birthday card for ${name}.` },
-        { property: "og:title", content: `Happy birthday, ${name} — Celebra` },
-        { property: "og:description", content: `A personalized birthday card for ${name}.` },
-      ],
-    };
-  },
+  head: () => ({
+    meta: [
+      { title: "Your Birthday Card — Celebra" },
+      { name: "description", content: "A personalized birthday card made just for you." },
+      { property: "og:title", content: "Your Birthday Card — Celebra" },
+      { property: "og:description", content: "A personalized birthday card made just for you." },
+    ],
+  }),
   component: CardPage,
 });
 
