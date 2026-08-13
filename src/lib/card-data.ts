@@ -41,4 +41,4 @@ export function getCardImageById(id: string): CardImage | undefined {
   return cardImages.find((image) => image.id === id);
 }
 
-export const defaultCardImageId = cardImages[0].id;
+export const defaultCardImageId = cardImages[0]!.id;
