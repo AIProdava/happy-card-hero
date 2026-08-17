@@ -4,6 +4,7 @@ import { routeTree } from "./routeTree.gen";
 
 export const getRouter = () => {
   const queryClient = new QueryClient();
+  fasdfasfdasfdasf;
 
   const router = createRouter({
     routeTree,
