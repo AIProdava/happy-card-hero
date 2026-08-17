@@ -56,9 +56,7 @@ function IndexPage() {
 
               <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
                 <div className="space-y-2">
-                  <p className="font-serif italic text-2xl md:text-3xl text-primary text-shadow-sm">
-                    Happy birthday,
-                  </p>
+                  <p className="font-serif italic text-2xl md:text-3xl text-primary text-shadow-sm">Happy birthday,</p>
                   <h1 className="font-serif text-5xl md:text-6xl text-foreground tracking-tight text-balance leading-none text-shadow-md">
                     {name.trim() || "someone"}
                   </h1>
@@ -75,7 +73,7 @@ function IndexPage() {
                 htmlFor="name"
                 className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground ml-1"
               >
-                Recipient Name
+                Име на рожденика
               </label>
               <input
                 type="text"
@@ -83,7 +81,7 @@ function IndexPage() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 className="w-full bg-transparent border-b-2 border-border focus:border-primary outline-none py-2 text-2xl font-serif transition-colors placeholder:text-muted-foreground"
-                placeholder="Enter name..."
+                placeholder="Въведете име на рожденика..."
                 maxLength={30}
               />
             </div>
@@ -91,11 +89,10 @@ function IndexPage() {
             <div className="space-y-4">
               <div className="flex items-end justify-between px-1">
                 <span className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">
-                  Select Artwork
+                  Изберете картичка
                 </span>
                 <span className="text-[10px] text-muted-foreground">
-                  {cardImages.findIndex((image) => image.id === selectedImageId) + 1} of{" "}
-                  {cardImages.length}
+                  {cardImages.findIndex((image) => image.id === selectedImageId) + 1} of {cardImages.length}
                 </span>
               </div>
 
