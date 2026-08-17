@@ -98,7 +98,7 @@ function IndexPage() {
               </span>
             </div>
 
-            <div className="flex gap-4 overflow-x-auto pb-6 -mx-6 px-6 no-scrollbar">
+            <div className="grid grid-cols-4 gap-3 pb-2">
               {cardImages.map((image) => {
                 const isSelected = image.id === selectedImageId;
                 return (
@@ -107,9 +107,9 @@ function IndexPage() {
                     type="button"
                     onClick={() => setSelectedImageId(image.id)}
                     className={cn(
-                      "flex-none w-24 aspect-[4/5] rounded-lg overflow-hidden transition-all",
+                      "w-full aspect-[4/5] rounded-lg overflow-hidden transition-all",
                       isSelected
-                        ? "ring-2 ring-primary ring-offset-4 ring-offset-background"
+                        ? "ring-2 ring-primary ring-offset-2 ring-offset-background"
                         : "grayscale opacity-60 hover:grayscale-0 hover:opacity-100",
                     )}
                     aria-label={`Select ${image.label}`}
