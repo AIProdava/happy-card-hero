@@ -73,7 +73,7 @@ function IndexPage() {
                 htmlFor="name"
                 className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground ml-1"
               >
-                Име на рожденика
+                ЧЕСТИТ РОЖДЕН ДЕН НА ЛЮБИМИЯ НИ РОЖДЕНИ
               </label>
               <input
                 type="text"
